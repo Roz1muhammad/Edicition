@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirish — Onlayn Oqish</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0077ff, #00c2ff);
+  }
+
+  .login-box {
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    width: 320px;
+    text-align: center;
+    position: relative;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  /* Ползунок ролей */
+  .role-slider {
+    display: flex;
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  .role-slider input {
+    display: none;
+  }
+
+  .role-label {
+    flex: 1;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1;
+    font-weight: 600;
+  }
+
+  .slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100%;
+    background: linear-gradient(135deg, #0077ff, #00c2ff);
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Поля ввода */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  input:focus {
+    border-color: #0077ff;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #0077ff, #00c2ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.03);
+  }
+</style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Kirish</h2>
+
+    <!-- Ползунок -->
+    <div class="role-slider">
+      <div class="slider-bg"></div>
+      <label class="role-label" for="student">Oquvchi</label>
+      <label class="role-label" for="teacher">Oqtuvchi</label>
+      <label class="role-label" for="admin">Admin</label>
+
+      <input type="radio" name="role" id="student" checked>
+      <input type="radio" name="role" id="teacher">
+      <input type="radio" name="role" id="admin">
+    </div>
+
+    <!-- Форма -->
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Parol" required>
+      <button type="submit">kirish</button>
+    </form>
+  </div>
+
+<script>
+  const bg = document.querySelector('.slider-bg');
+  const radios = document.querySelectorAll('input[name="role"]');
+  const labels = document.querySelectorAll('.role-label');
+
+  function updateSlider() {
+    const selected = Array.from(radios).findIndex(r => r.checked);
+    bg.style.transform = translateX(${selected * 100}%);
+    labels.forEach((lbl, i) => {
+      lbl.style.color = i === selected ? '#fff' : '#555';
+    });
+  }
+
+  radios.forEach(r => r.addEventListener('change', updateSlider));
+  updateSlider();
+
+</script>
+</body>
+</html>
