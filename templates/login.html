@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kirish — Onlayn Oqish</title>
-<link rel="stylesheet" href="{% static 'css/login.css'%}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body>
   <div class="login-box">
     <h2>Kirish</h2>
-
-    <div class="role-slider">
-      <div class="slider-bg"></div>
-      <label class="role-label" for="student">Oquvchi</label>
-      <label class="role-label" for="teacher">Oqtuvchi</label>
-      <label class="role-label" for="admin">Admin</label>
-
-      <input type="radio" name="role" id="student" checked>
-      <input type="radio" name="role" id="teacher">
-      <input type="radio" name="role" id="admin">
-    </div>
-
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Parol" required>
-      <button type="submit">kirish</button>
+    
+    <form id="loginForm" method="POST" action="{% url 'login_view' %}">
+      {% csrf_token %}      
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Parol" required>
+      <button type="submit">Kirish</button>
     </form>
-  </div>
 
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  
 <script src="{% static 'js/login.js' %}"></script>
 </body>
 </html>
