@@ -20,3 +20,8 @@ def login_view(request):
             messages.error(request, "Noto‘g‘ri foydalanuvchi nomi yoki parol!")
     return render(request, 'login.html')
 
+def oqtuvchi(request):
+    return render(request, "oqituvchi_page.html")
+
+def oquvchi(request):
+    return render(request, "oquvchi_page.html")
