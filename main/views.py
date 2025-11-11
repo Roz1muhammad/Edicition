@@ -21,7 +21,7 @@ def login_view(request):
     return render(request, 'login.html')
 
 def oqtuvchi(request):
-    return render(request, "oqituvchi_page.html")
+    return render(request, "teacher.html")
 
 def oquvchi(request):
-    return render(request, "oquvchi_page.html")
+    return render(request, "student.html")
