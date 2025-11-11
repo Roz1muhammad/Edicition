@@ -213,4 +213,6 @@ private/*
 media/
 media/*
 
+db.sqlite3/
+
 
