@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  {% load static %}w
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takoy Academy — Ali Karimov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/oquvchi.css'  %}">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Takoy Academy</div>
+    <nav>
+      <a href="#">Bosh sahifa</a>
+      <a href="#">Darslar</a>
+      <a href="#">Topshiriqlar</a>
+      <a href="#">Profil</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Baholar (1-10 gacha) -->
+<div class="scores-bar">
+  <div class="score-card">Matematika<br><span>9.5</span></div>
+  <div class="score-card">Ingliz tili<br><span>8.8</span></div>
+  <div class="score-card">Informatika<br><span>9.2</span></div>
+  <div class="score-card">Fizika<br><span>8.5</span></div>
+  <div class="score-card">Kimyo<br><span>9.0</span></div>
+  <div class="score-card">Tarix<br><span>8.7</span></div>
+  <div class="score-card">Ona tili<br><span>9.4</span></div>
+  <div class="score-card">Adabiyot<br><span>9.0</span></div>
+</div>
+
+<main>
+  <!-- Chap taraf – Profil (20% kenglik) -->
+  <aside>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7T9VOCzPJOr0qhwQmuvbXtqxVzw7LKUB2mA&s" alt="Ali Karimov">
+    <h2>Ali Karimov</h2>
+    <p class="class">9-"B" sinf</p>
+    <p class="bio">Web dasturlash yo‘nalishi<br>Frontend Developer bo‘lishni orzu qilaman</p>
+
+    <!-- Kurs haqida ma'lumot -->
+    <div class="course-info">
+      <h3>Aktiv kurs</h3>
+      <p><strong>Full Stack Web Dasturchi</strong></p>
+      <p>HTML, CSS, JavaScript, Python Django</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: 68%"></div>
+      </div>
+      <p class="progress-text">68% yakunlangan (41/60 dars)</p>
+    </div>
+
+    <!-- Davomat (keldi/kelmadi) -->
+    <div class="attendance">
+      <h3>Oxirgi 7 kun davomati</h3>
+      <div class="days">
+        <span class="present">Dush</span>
+        <span class="present">Sesh</span>
+        <span class="present">Chor</span>
+        <span class="present">Pay</span>
+        <span class="present">Juma</span>
+        <span class="absent">Shan</span>
+        <span class="present">Yak</span>
+      </div>
+      <p class="attendance-rate">Davomat: <strong>86%</strong> (6/7 kun)</p>
+    </div>
+  </aside>
+
+  <!-- O'ng taraf – Bugungi darslar -->
+  <section>
+    <h2 class="section-title">Bugungi darslar</h2>
+    <div class="lessons">
+      <div class="lesson">
+        <div>
+          <h3>HTML Asoslari</h3>
+          <p>Veb sahifani tuzish uchun asosiy teglar va tuzilma.</p>
+          <small>Yangi</small>
+        </div>
+      </div>
+      <div class="lesson">
+        <div>
+          <h3>CSS Flexbox & Grid</h3>
+          <p>Zamonaviy layout usullari bilan murakkab dizaynlar yaratish.</p>
+          <small>Bajarilmoqda</small>
+        </div>
+      </div>
+      <div class="lesson">
+        <div>
+          <h3>JavaScript Kirish</h3>
+          <p>O‘zgaruvchilar, funksiyalar va DOM bilan ishlash.</p>
+          <small>Kutilmoqda</small>
+        </div>
+      </div>
+      <div class="lesson">
+        <div>
+          <h3>Portfolio loyiha</h3>
+          <p>Shaxsiy veb-sayt yaratish va GitHub’ga joylash.</p>
+          <small>Topshirilgan</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Takoy Academy — O‘zbekistondagi #1 ta’lim platformasi
+</footer>
+
+</body>
+</html>
