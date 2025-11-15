@@ -240,13 +240,12 @@ section { flex: 1; }
 .lesson:nth-child(4n+4) small { background: #4ade80; color: #fff; }
 
 footer {
-  background: var(--gradient2);
+  background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid));
   color: white;
   text-align: center;
-  padding: 32px;
+  padding: 14px 0;
   font-weight: 600;
-  font-size: 15px;
-  margin-top: 80px;
+  margin-top: auto;
 }
 
 @media (max-width: 1100px) {
