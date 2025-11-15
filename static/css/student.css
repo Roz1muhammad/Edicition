@@ -1,7 +1,7 @@
 :root {
   --primary: #4361ee;
   --primary-dark: #3a0ca3;
-  --secondary: #7209b7;
+  --secondary: #3b82f6;
   --accent: #f72585;
   --success: #4ade80;
   --danger: #ff6b6b;
@@ -28,7 +28,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
 header {
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(16px);
@@ -46,7 +45,6 @@ nav a { color: #333; text-decoration: none; font-weight: 600; margin-left: 32px;
 nav a::after { content: ''; position: absolute; width: 0; height: 3px; background: var(--gradient2); bottom: -8px; left: 50%; transition: 0.4s; border-radius: 2px; }
 nav a:hover::after { width: 100%; left: 0; }
 
-/* SCORES BAR – 1-10 baholar */
 .scores-bar {
   display: flex;
   gap: 20px;
@@ -88,7 +86,6 @@ nav a:hover::after { width: 100%; left: 0; }
   display: block;
 }
 
-/* MAIN – Chap taraf 20% */
 main {
   flex: 1;
   max-width: 1400px;
@@ -100,7 +97,6 @@ main {
 }
 
 aside {
-  flex: 0 0 20%;           /* Aynan 20% */
   background: var(--card);
   border-radius: 28px;
   padding: 32px 24px;
@@ -126,7 +122,6 @@ aside h2 { font-size: 24px; font-weight: 800; text-align: center; color: var(--p
 aside .class { font-weight: 700; text-align: center; color: var(--secondary); margin-bottom: 16px; }
 aside .bio { text-align: center; color: var(--text-light); font-size: 15px; line-height: 1.5; margin-bottom: 30px; }
 
-/* Kurs ma'lumoti */
 .course-info, .attendance {
   background: rgba(67,97,238,0.05);
   border-radius: 18px;
@@ -163,7 +158,6 @@ aside .bio { text-align: center; color: var(--text-light); font-size: 15px; line
   text-align: center;
 }
 
-/* Davomat */
 .days {
   display: flex;
   justify-content: space-between;
@@ -190,7 +184,6 @@ aside .bio { text-align: center; color: var(--text-light); font-size: 15px; line
   color: var(--text-light);
 }
 
-/* O'ng taraf – Darslar */
 section { flex: 1; }
 
 .section-title {
@@ -246,7 +239,6 @@ section { flex: 1; }
 .lesson:nth-child(4n+3) small { background: #fdb813; color: #333; }
 .lesson:nth-child(4n+4) small { background: #4ade80; color: #fff; }
 
-/* FOOTER */
 footer {
   background: var(--gradient2);
   color: white;
@@ -257,7 +249,6 @@ footer {
   margin-top: 80px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1100px) {
   aside { flex: 0 0 25%; }
 }

@@ -12,7 +12,6 @@
   --gray: #e5e7eb;
 }
 
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +27,6 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
 header {
   background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid));
   color: white;
@@ -70,7 +68,6 @@ nav a:hover {
   opacity: 0.8;
 }
 
-/* ===== STATS BAR (TOP SCROLLABLE) ===== */
 .stats-bar {
   display: flex;
   gap: 12px;
@@ -113,7 +110,6 @@ nav a:hover {
   margin-top: 4px;
 }
 
-/* ===== MAIN ===== */
 main {
   display: flex;
   flex: 1;
@@ -123,7 +119,6 @@ main {
   width: calc(100% - 40px);
 }
 
-/* PROFILE (LEFT) */
 aside {
   background: var(--white);
   border-radius: 16px;
@@ -156,7 +151,6 @@ aside p {
   font-size: 0.95rem;
 }
 
-/* TEACHER STATS SECTION */
 .teacher-stats {
   background: var(--white);
   border-radius: 12px;
@@ -193,7 +187,6 @@ aside p {
   margin-bottom: 4px;
 }
 
-/* CLASSES SECTION */
 section {
   flex: 1;
 }
@@ -259,7 +252,6 @@ section {
 .status-kutilmoqda { background: var(--blue-light); color: white; }
 .status-tugallangan { background: var(--green); color: white; }
 
-/* FOOTER */
 footer {
   background: linear-gradient(90deg, var(--blue-dark), var(--blue-mid));
   color: white;
@@ -269,7 +261,6 @@ footer {
   margin-top: auto;
 }
 
-/* MOBILE */
 @media (max-width: 850px) {
   main {
     flex-direction: column;
