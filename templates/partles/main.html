@@ -1,0 +1,198 @@
+{% load static %}
+
+
+
+  {% if user.ut == 1 %}
+    <div class="main">
+      <div class="topbar">
+        <h1>Admin paneli</h1>
+        <div class="date">18-noyabr, 2025</div>
+      </div>
+
+      <!-- Statistikalar -->
+      <div class="stats">
+        <div class="stat-card">
+          <h3>1 284</h3>
+          <p>Jami o‘quvchi</p>
+        </div>
+        <div class="stat-card">
+          <h3>86 mln</h3>
+          <p>Bu oy daromad</p>
+        </div>
+        <div class="stat-card">
+          <h3>42</h3>
+          <p>Faol guruh</p>
+        </div>
+        <div class="stat-card">
+          <h3>28</h3>
+          <p>O‘qituvchi</p>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        <!-- Yangi o‘quvchilar -->
+        <div class="big-card">
+          <h2>Yangi ro‘yxatdan o‘tganlar (bugun)</h2>
+
+          <div class="student">
+            <div><strong>Dilshod Karimov</strong><br><span class="sub">+998 99 123 45 67</span></div>
+            <div class="new">YANGI</div>
+          </div>
+          <div class="student">
+            <div><strong>Madina Usmonova</strong><br><span class="sub">Flutter 6-guruh</span></div>
+            <div class="new">YANGI</div>
+          </div>
+          <div class="student">
+            <div><strong>Aziz Xolmatov</strong><br><span class="sub">Python AI</span></div>
+            <div class="new">YANGI</div>
+          </div>
+          <div class="student">
+            <div><strong>Sarvar Beknazarov</strong><br><span class="sub">Backend Node.js</span></div>
+            <div class="new">YANGI</div>
+          </div>
+
+        </div>
+
+        <!-- Tez kirish -->
+        <div class="big-card">
+          <h2>Tez amallar</h2>
+          <div class="quick-links">
+            <a href="#" class="btn-main">Yangi guruh ochish</a>
+            <a href="#" class="btn-outline">SMS yuborish</a>
+            <a href="#" class="btn-outline">Hisobot yuklab olish</a>
+            <a href="#" class="btn-outline">Backup yaratish</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  {% elif user.ut == 2 %}
+    <div class="main">
+    <div class="header">
+      <h1>Xush kelibsiz, Javlonbek!</h1>
+      <div class="today">Bugun: 19:00 – 2 dars</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Bugungi darslar</h3>
+        <p><strong>19:00</strong> – Frontend 14-guruh<br>
+           <strong>20:30</strong> – React Master 8-guruh</p>
+        <p class="link">Zoom: meeting.srm.uz/javlon</p>
+      </div>
+
+      <div class="card">
+        <h3>Jami o‘quvchilar</h3>
+        <p><strong>68 nafar</strong> (4 ta guruh)</p>
+        <p>O‘rtacha davomat: <strong>94%</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Kutayotgan uy vazifalari</h3>
+        <p><strong>24 ta</strong> tekshirish kerak</p>
+        <p class="deadline">Oxirgi muddat: 21-noyabr</p>
+      </div>
+
+      <div class="card">
+        <h3>Bu oy daromadingiz</h3>
+        <p class="income">18 400 000 so‘m</p>
+      </div>
+    </div>
+
+    <div class="groups">
+      <h2 class="groups-title">Sizning guruhlaringiz</h2>
+
+      <div class="group">
+        <div>
+          <div class="group-name">Frontend 14-guruh</div>
+          <div class="group-info">Dushanba, Chorshanba, Juma • 19:00</div>
+        </div>
+        <div class="students-count">18 o‘quvchi</div>
+      </div>
+
+      <div class="group">
+        <div>
+          <div class="group-name">React Master 8-guruh</div>
+          <div class="group-info">Seshanba, Payshanba • 20:30</div>
+        </div>
+        <div class="students-count">15 o‘quvchi</div>
+      </div>
+
+      <div class="group">
+        <div>
+          <div class="group-name">Next.js Pro 3-guruh</div>
+          <div class="group-info">Shanba • 11:00-13:30</div>
+        </div>
+        <div class="students-count">20 o‘quvchi</div>
+      </div>
+
+      <div class="group">
+        <div>
+          <div class="group-name">Individual 1-na-1 (5 nafar)</div>
+          <div class="group-info">Shaxsiy jadval bo‘yicha</div>
+        </div>
+        <div class="students-count">5 o‘quvchi</div>
+      </div>
+    </div>
+  </div>
+  {% elif user.ut == 3 %}
+    <div class="main">
+    <div class="header">
+      <h1>Xush kelibsiz, Azizbek!</h1>
+      <div class="balance">Qarzingiz: 0 so‘m</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Kelajakdagi dars</h3>
+        <p><strong>Bugun, 19:00</strong><br>React Advanced – useEffect chuqur</p>
+        <p class="link">Zoom link: meeting.srm.uz/12345</p>
+      </div>
+
+      <div class="card">
+        <h3>Davomat</h3>
+        <p>Bu oy: <strong>18 / 20</strong> (90%)</p>
+        <p>Jami: <strong>142 / 150</strong> (95%)</p>
+      </div>
+
+      <div class="card">
+        <h3>Keyingi to‘lov</h3>
+        <p><strong>15-dekabr</strong> – 1 200 000 so‘m</p>
+        <p class="highlight">Avto to‘lov yoqilgan</p>
+      </div>
+
+      <div class="card">
+        <h3>Uy vazifasi</h3>
+        <p>Todo App + Context API</p>
+        <p class="deadline">Topshirish: 20-noyabr, 23:59</p>
+      </div>
+    </div>
+
+    <div class="schedule">
+      <h2 class="schedule-title">Bu hafta jadvali</h2>
+
+      <div class="day">
+        <div class="time">Dushanba • 19:00</div>
+        <div class="subject">React Hooks & State Management</div>
+      </div>
+
+      <div class="day">
+        <div class="time">Chorshanba • 19:00</div>
+        <div class="subject">Next.js 15 – App Router</div>
+      </div>
+
+      <div class="day">
+        <div class="time">Juma • 19:00</div>
+        <div class="subject">TypeScript Advanced</div>
+      </div>
+
+      <div class="day">
+        <div class="time">Shanba • 11:00</div>
+        <div class="subject">1-na-1 Mentorlik (30 daqiqa)</div>
+      </div>
+    </div>
+  </div>
+
+
+  {% endif %}

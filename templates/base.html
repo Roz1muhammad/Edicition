@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin paneli | SRM Pro</title>
+
+  {% if user.ut == 1 %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+  {% elif user.ut == 2 %}
+    <link rel="stylesheet" href="{% static 'css/teacher.css' %}">
+  {% elif user.ut == 3 %}
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+  {% endif %}
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+  {% include 'partles/sidebar.html' %}
+
+  {% include 'partles/main.html' %}
+
+</body>
+</html>

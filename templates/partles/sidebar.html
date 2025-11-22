@@ -1,0 +1,40 @@
+{% load static %}
+
+
+
+<div class="sidebar">
+    <div class="logo">SRM Pro</div>
+
+    <div class="admin">
+      <img src="https://i.pravatar.cc/150?img=56" alt="admin">
+      <div class="admin-info">
+        <h3>Sardor Raximov</h3>
+        <p>Bosh direktor</p>
+      </div>
+    </div>
+
+    <div class="menu">
+    {% if user.ut == 1 %}
+          <a href="#" class="active"><i class="uil uil-estate"></i>Boshqaruv paneli</a>
+      <a href="#"><i class="uil uil-users-alt"></i>O‘quvchilar</a>
+      <a href="#"><i class="uil uil-user-md"></i>O‘qituvchilar</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Guruhlar</a>
+      <a href="#"><i class="uil uil-bill"></i>Moliya</a>
+      <a href="#"><i class="uil uil-file-alt"></i>Hisobotlar</a>
+      <a href="#"><i class="uil uil-message"></i>SMS & Telegram</a>
+      <a href="#"><i class="uil uil-setting"></i>Sozlamalar</a>
+    {% elif user.ut == 2 %}
+       <a href="#" class="active"><i class="uil uil-estate"></i>Boshqaruv paneli</a>
+      <a href="#"><i class="uil uil-users-alt"></i>O‘quvchilar</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Darslar</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Guruhlar</a>
+    {% elif user.ut == 3 %}
+          <a href="#" class="active"><i class="uil uil-estate"></i>Boshqaruv paneli</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Uy ishlari</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Dars kunlari</a>
+      <a href="#"><i class="uil uil-layer-group"></i>Guruh</a>
+
+        {% else %}
+    {% endif %}
+    </div>
+  </div>
