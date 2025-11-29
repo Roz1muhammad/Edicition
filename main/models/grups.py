@@ -1,7 +1,5 @@
-import datetime
 from django.utils import timezone
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
 from main.models import User
 
 
@@ -104,28 +102,3 @@ class Davomat(models.Model):
         verbose_name = "Davomat"
         verbose_name_plural = "Davomatlar"
 
-
-
-
-from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
-
-class Ball(models.Model):
-    ball = models.PositiveIntegerField(
-        default=0,
-        validators=[
-            MinValueValidator(0),
-            MaxValueValidator(5)
-        ],
-        
-    )
-    oqtuvchi = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, limit_choices_to={"ut": 2}, related_name="balls_given"
-    )
-    oquvchi = models.ForeignKey(
-        User, on_delete=models.SET_NULL, null=True, limit_choices_to={"ut": 3}, related_name="balls_received"
-    )
-    group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True)
-
-    def __str__(self):
-        return f"{self.ball} || {self.oqtuvchi} || {self.oquvchi} || {self.group}"
