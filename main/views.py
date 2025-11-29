@@ -70,7 +70,7 @@ def admin_dashboard(request):
     interested_all = Interested.objects.all()
     interested_count = interested_all.count()
 
-    total_teachers = User.objects.filter(ut=2).count()
+
     total_students = User.objects.filter(ut=3).count()
 
     ctx.update({
@@ -78,7 +78,7 @@ def admin_dashboard(request):
         "courses_with_counts": courses_with_counts,
         "interested_all": interested_all,
         "interested_count": interested_count,
-        "total_teachers": total_teachers,
+
         "total_students": total_students,
     })
 
